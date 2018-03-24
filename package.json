@@ -1,0 +1,62 @@
+{
+  "name": "cra-boilerplate",
+  "version": "0.1.0",
+  "description": "boilerplate for important create-react-app projects",
+  "keywords": [
+    "boilerplate",
+    "create-react-app",
+    "codecov",
+    "travis-ci",
+    "styled-components",
+    "eslint"
+  ],
+  "bugs": "https://github.com/veekas/cra-boilerplate/issues",
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "veekas shrivastava",
+    "email": "veekas@veekasmeansprogress.com",
+    "url": "http://www.veekasmeansprogress.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veekas/cra-boilerplate"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1",
+    "styled-components": "^3.2.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint:css": "stylelint './src/**/*.js'",
+    "coverage": "yarn test --coverage",
+    "report-coverage": "yarn coverage && codecov -t INSERT_CODECOV_TOKEN",
+    "push": "git push && yarn report-coverage",
+    "validate-codecov-yml": "curl --data-binary @codecov.yml https://codecov.io/validate"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "stylelint": "^9.1.3",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.3.1"
+  },
+  "private": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
